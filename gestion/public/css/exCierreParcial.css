@@ -1,0 +1,74 @@
+.tblefectivo{
+	table-layout: fixed;
+	border: 1px solid gray; 
+}
+
+td{
+		border: 1px solid gray; 
+}
+
+.efe_reg, 
+.dcto_reg, 
+.banco_reg{
+	width: 70px;
+	word-wrap: break-word;
+	text-align: center;
+	font-weight: bold;
+}
+.val_efe_reg, 
+.dcto_reg_val, 
+.banco_reg_val{
+	text-align: center;
+}
+.efe_nombre, 
+.dcto_nombre, 
+.banco_nombre{
+	width: 350px;
+	word-wrap: break-word;
+	text-align: center;
+	font-weight: bold;
+}
+/*.val_efe_nombre{
+	text-align: left;
+}*/
+.efe_doc,
+.dcto_doc{
+	width: 150px;
+	word-wrap: break-word;
+	text-align: center;
+	font-weight: bold;
+}
+
+.efe_valor, 
+.dcto_valor, 
+.banco_valor{
+	width: 100px;
+	word-wrap: break-word;
+	text-align: center;
+	font-weight: bold;
+}
+.val_efe_valor, 
+.dcto_valor_val, 
+.banco_valor_val,
+.efe_total,
+.dcto_total,
+.banco_total,
+.efe_total_valor, 
+.dcto_total_val, 
+.banco_total_val,
+.efe_doc_val,
+.dcto_doc_val
+{
+	text-align: right;
+}
+
+.tbldescuento, .tblbancos{
+	table-layout: fixed;
+	border: 1px solid gray; 
+}
+.dcto_concepto, .banco_concepto{
+	width: 300px;
+	word-wrap: break-word;
+	text-align: center;
+	font-weight: bold;
+}

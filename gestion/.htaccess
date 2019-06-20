@@ -1,0 +1,7 @@
+# Order deny, allow
+Allow from All
+# Deny from xxx.xxx.xxx.yyy
+ 
+# en Apache 2.4, utiliza lo siguiente
+# Require not ip xxx.xxx.xxx.xxx
+# Require not ip xxx.xxx.xxx.yyy
