@@ -152,4 +152,9 @@ switch ($_GET['op']) {
 
 // Funciones para llamar los datos
 
+public function mostrar datos()
+{
+	
+}
+
 ?>
