@@ -8,7 +8,7 @@ if (!isset($_SESSION["usu_nombre"])) {
 }else{
   require 'header.php';
   // Validacion de permisos mediante variable de sesion 
-  if ($_SESSION['notasdebcred']==1) {
+  if ($_SESSION['notasdebito']==1) {
 ?>
 <!-- encoded by @Francisco Monsalve -->
 <!--Contenido-->

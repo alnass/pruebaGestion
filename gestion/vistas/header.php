@@ -238,16 +238,6 @@ if (strlen(session_id()) < 1) {
                         </a>
                       </li>
                     </ul>';
-                if ($_SESSION['promociones']==1) {
-                  echo '        
-                    <ul class="treeview-menu">
-                      <li>
-                        <a href="promocion.php"><i class="fa fa-circle-o"></i> 
-                          Promocion
-                        </a>
-                      </li>
-                    </ul>';
-                  }
                   '</li>';  
               }
             ?> <!-- Fin Gestio de productos -->
@@ -336,7 +326,15 @@ if (strlen(session_id()) < 1) {
                     </a>
                     <ul class="treeview-menu">
                       <li>
-                        <a href="consolidadoVentas.php"><i class="fa fa-circle-o"></i>Consolidado Ventas</a>
+                        <a href="#"><i class="fa fa-circle-o"></i>Consolidado Ventas</a>
+                        <ul class="treeview-menu">
+                          <li>
+                            <a href="consolidadoVentas.php"><i class="fa fa-circle-o"></i>Por año</a>
+                          </li>
+                          <li>
+                            <a href="consolidadoVentasMesActual.php"><i class="fa fa-circle-o"></i>Último mes</a>
+                          </li>
+                        </ul>
                       </li> 
                       <li>
                         <a href="consultaUsuarios.php">
@@ -562,32 +560,7 @@ if (strlen(session_id()) < 1) {
                   </ul>
                 </li>';
             ?> <!-- Fin Contratos -->
-            <?php // Notas a cuenta 
-              if ($_SESSION['notasdebcred']==1) 
-              {
-                echo '
-                  <li class="treeview">
-                    <a href="">
-                      <i class="fa fa-usd"></i> <span>Notas a cuenta</span>
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                      <li>
-                        <a href="notaDebito.php">
-                          <i class="fa fa-circle-o"></i> 
-                          Notas debito
-                        </a>
-                      </li>   
-                      <li>
-                        <a href="notaCredito.php">
-                          <i class="fa fa-circle-o"></i> 
-                          Notas credito
-                        </a>
-                      </li>
-                    </ul>
-                  </li>';
-              } 
-            ?> <!-- Fin Notas a cuenta -->
+            
             <?php //Equipos
               if ($_SESSION['equipos']==1) {
                 echo '
@@ -782,6 +755,74 @@ if (strlen(session_id()) < 1) {
                 ';
               }
             ?> <!-- Fin Orden de Trabajo -->
+            <?php //Operaciones Contables
+              if ($_SESSION['inventario']==1) {
+                echo '
+                  <li class="treeview">
+                    <a href="">
+                      <i class="fa fa-line-chart" aria-hidden="true"></i><span>Operaciones Contables</span>
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">';
+              if ($_SESSION['notasdebcred']==1) 
+              {
+                echo '
+                      <li>
+                        <a href="">
+                          <i class="fa fa-usd"></i> <span>Notas a cuenta</span>
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">';
+                          
+                if ($_SESSION['notasdebito']==1) 
+                {         
+                        echo'
+                          <li>
+                            <a href="notaDebito.php">
+                              <i class="fa fa-circle-o"></i> 
+                                Notas debito
+                            </a>
+                          </li>';
+                }
+                if ($_SESSION['notascredito']==1) 
+                {         
+                  echo
+                          '
+                          <li>
+                            <a href="notaCredito.php">
+                              <i class="fa fa-circle-o"></i> 
+                                Notas credito
+                            </a>
+                          </li>';
+                }
+                  echo '
+                        </ul>
+                      </li>';
+              } 
+                echo  '
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-circle"></i> 
+                            Gastos
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-circle"></i> 
+                            Trasalado Efectivo
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-circle"></i> 
+                            Recaudo Admon
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                ';
+              }
+            ?> <!-- Fin Inventario --> 
           </ul>
         </section>
       </aside><!-- /.sidebar -->

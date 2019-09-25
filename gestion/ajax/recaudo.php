@@ -499,10 +499,10 @@ switch ($_GET["op"]) {
 				$estadoservicio = '<span class="label bg-red">Por traslado</span>';
 			}
 			elseif ($reg->cont_estado_servicio_id == 13) {
-				$estadoservicio = '<span class="label bg-red">Agr. Producto</span>';	
+				$estadoservicio = '<span class="label label-info">Agr. Producto</span>';	
 			}
-			elseif($reg->cont_estado_servicio_id >= 14){
-				$estadoservicio = 'Error ST1002';
+			elseif($reg->cont_estado_servicio_id == 14){
+				$estadoservicio = '<span class="label bg-yellow">Cmb. Producto</span>';
 			}
 
 			$data[] = array(
@@ -614,10 +614,10 @@ switch ($_GET["op"]) {
 				$estadoservicio = '<span class="label bg-red">Por traslado</span>';
 			}
 			elseif ($reg->cont_estado_servicio_id == 13) {
-				$estadoservicio = '<span class="label bg-red">Agr. Producto</span>';	
+				$estadoservicio = '<span class="label label-info">Agr. Producto</span>';	
 			}
-			elseif($reg->cont_estado_servicio_id >= 14){
-				$estadoservicio = 'Error ST1002';
+			elseif($reg->cont_estado_servicio_id == 14){
+				$estadoservicio = '<span class="label bg-yellow">Cmb. Producto</span>';
 			}
 
 			$data[] = array(

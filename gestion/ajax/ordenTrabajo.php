@@ -299,10 +299,10 @@ switch($_GET["op"])
 				$estadoservicio = '<span class="label bg-red">08 Por traslado</span>';
 			}
 			elseif ($reg->cont_estado_servicio_id == 13) {
-				$estadoservicio = '<span class="label bg-red">02 Agr. Producto</span>';	
+				$estadoservicio = '<span class="label label-info">Agr. Producto</span>';	
 			}
-			elseif($reg->cont_estado_servicio_id >= 14){
-				$estadoservicio 	= '<span class="label label-info">01 Camb. Product</span>';	
+			elseif($reg->cont_estado_servicio_id == 14){
+				$estadoservicio = '<span class="label bg-yellow">Cmb. Producto</span>';
 			}
 
 

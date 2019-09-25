@@ -420,9 +420,9 @@ switch ($_GET["op"]) {
 			//ingreso a cuentas de cobro
 			in_array(39, $valores)?$_SESSION['cuentasCobro']=1:$_SESSION['cuentasCobro']=0;// maintenance
 			//ingreso a promociones
-			in_array(40, $valores)?$_SESSION['promociones']=1:$_SESSION['promociones']=0;// maintenance
+			in_array(40, $valores)?$_SESSION['notasdebito']=1:$_SESSION['notasdebito']=0;// maintenance
 			//ingreso a sedes
-			in_array(41, $valores)?$_SESSION['sedes']=1:$_SESSION['sedes']=0;// maintenance
+			in_array(41, $valores)?$_SESSION['notascredito']=1:$_SESSION['notascredito']=0;// maintenance
 			/*==========================================================================================
 			 |								ACCESO TEMPORAL COMPRAS										|
 			  ==========================================================================================*/
